@@ -39,7 +39,7 @@ const Main: FC = () => {
   useEffect(() => {
     if (APP_INFO?.title)
       document.title = `${APP_INFO.title} - Powered by Dify`
-  }, [APP_INFO?.title])
+  }, [])
 
   /*
   * conversation info
@@ -128,6 +128,7 @@ const Main: FC = () => {
 
     setControlFocus(Date.now())
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(handleConversationSwitch, [currConversationId, inited])
 
   const handleConversationIdChange = (id: string) => {
@@ -235,6 +236,7 @@ const Main: FC = () => {
         }
       }
     })()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const [isResponsing, { setTrue: setResponsingTrue, setFalse: setResponsingFalse }] = useBoolean(false)
