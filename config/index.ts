@@ -10,7 +10,7 @@ export const APP_INFO: AppInfo = {
   default_language: 'en',
 }
 
-export const isShowPrompt = true
+export const isShowPrompt = false
 export const promptTemplate = 'You are an AI assistant'
 
 export const API_PREFIX = '/api'
